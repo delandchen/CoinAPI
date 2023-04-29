@@ -1,6 +1,6 @@
-API Endpoints
+Changes I've made: This Coin API is very similar to the Coin API idea presentation, the only difference is that I made a modern twist to it. Instead of taking in physical coins for coin collectors, I've updated it to cryptocurrency instead.
 
-This document outlines the available endpoints for our API.
+API Endpoints
 
 Coins
 
@@ -77,12 +77,10 @@ Create a new user
 Endpoint: https://<DEVELOPMENT-URL>/api/user/
 
 Body:
-json
-Copy code
 {
-    "firstName": "Jake",
-    "lastName": "Bake",
-    "emailAddress": "jabak@gmail.com"
+    "firstName": "John",
+    "lastName": "Doe",
+    "emailAddress": "johndoe@gmail.com"
 }
 Creates a new user with the specified details and returns a JSON object containing the details of the newly created user.
 ------------
@@ -99,7 +97,16 @@ Deletes the specified user from the database.
 
 ------------
 
-
-
-
+------------
+RESPONSE BODY
+------------
+{
+  
+    "statusCode": code,
+    "statusDescription": description",
+    "user": null,  // For getting a specifc user
+    "coin": null, // For getting a sepcific coin
+    "coins": [], // For getting all coins
+    "users": [] // For getting all users
+}
 
